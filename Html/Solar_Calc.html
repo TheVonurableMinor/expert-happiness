@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your solar power needs and estimate solar panel and battery sizes.">
+  <meta name="keywords" content="solar calculator, solar power, energy calculation, solar panel size, battery capacity, Citadel Foundation">
+  <title>Solar Power Calculator | Citadel</title>
+  <link rel="icon" type="image/png" href="../Media/Logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Css/Navbar.css">
+  <link rel="stylesheet" href="../Css/index.css"> <!-- Assuming index.css contains styles for hero-solar -->
+  <link rel="stylesheet" href="../Css/Footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg custom-navbar shadow fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../Media/Logo.png" alt="Citadel Foundation Logo" class="logo-img animate__animated animate__fadeIn">
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="faded-line"></div>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav menu-wrapper">
+              <li class="nav-item">
+                <a class="nav-link menu-box" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link menu-box dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Readiness
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item menu-box" href="POR.html">Power Outage Readiness</a></li>
+                  <li><a class="dropdown-item menu-box" href="DoAndDont.html">Do & Don't</a></li>
+                  <li><a class="dropdown-item menu-box" href="SaveEnergy.html">Save Energy</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu-box" href="Tips.html">Tips</a>
+              </li>
+              <li class="nav-item dropdown">
+                <!-- Set active class for the current page's parent dropdown -->
+                <a class="nav-link menu-box dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Solar
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <!-- Set active class for the current page link -->
+                  <li><a class="dropdown-item menu-box active" href="Solar_Calc.html">Calculator</a></li>
+                  <li><a class="dropdown-item menu-box" href="SIG.html">Solar Installation Guide</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu-box" href="Aboutus.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<section class="hero-solar text-center pt-navbar-offset py-5" data-aos="fade-in">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <h1 class="text-center mb-5" style="color: #AFDDE5; font-family: 'Cormorant Garamond', serif; font-weight: 700; margin-top: 7rem;">Solar Power Calculator</h1> <!-- Updated Title -->
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Easily estimate the solar panel and battery sizes required to power your Do-s & Don't-s appliances.</p>
+                    <!-- Optional: Add a scroll-to-calculator button -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section class="calculator-section py-5" id="calculator-section-id"> <!-- Added ID for linking -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card calculator-card shadow-lg mb-5" data-aos="fade-up">
+            <div class="card-header">
+              <h3 class="card-title mb-0"><i class="bi bi-calculator me-2"></i>Estimate Your Energy Consumption</h3>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Add your appliances below to calculate your total daily energy usage.</p>
+              <form id="appliance-form">
+                <div class="row g-3 mb-3">
+                  <div class="col-md-5">
+                    <label for="appliance-name" class="form-label">Appliance Name</label>
+                    <input type="text" class="form-control" id="appliance-name" placeholder="e.g., LED Bulb" required aria-label="Appliance Name">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="appliance-wattage" class="form-label">Wattage (W)</label>
+                    <input type="number" class="form-control" id="appliance-wattage" placeholder="e.g., 10" required min="1" aria-label="Wattage in Watts">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="appliance-hours" class="form-label">Hours/Day</label>
+                    <input type="number" class="form-control" id="appliance-hours" placeholder="e.g., 5" required min="0.1" step="0.1" aria-label="Hours used per day">
+                  </div>
+                  <div class="col-md-1 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary w-100" aria-label="Add Appliance"><i class="bi bi-plus-circle"></i></button>
+                  </div>
+                </div>
+              </form>
+              <h4 class="mt-4 mb-3">Added Appliances</h4>
+              <ul id="appliance-list" class="list-group mb-4">
+                <li class="list-group-item" id="no-appliances-msg">No appliances added yet.</li>
+              </ul>
+              <div class="d-grid gap-2">
+                <button id="calculate-btn" class="btn btn-success btn-lg"><i class="bi bi-lightning-charge me-2"></i>Calculate Solar Needs</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="results-card" class="card results-card shadow-lg" data-aos="fade-up" style="display: none;">
+            <div class="card-header">
+              <h3 class="card-title mb-0"><i class="bi bi-lightbulb me-2"></i>Estimated Solar System Size</h3>
+            </div>
+            <div class="card-body">
+              <h4 class="mb-3">Your Daily Energy Consumption: <span id="total-consumption">0 Wh</span></h4>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Recommended Solar Panel Capacity:
+                  <span id="recommended-panel" class="badge bg-primary rounded-pill">Calculating...</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  Recommended Battery Capacity:
+                  <span id="recommended-battery" class="badge bg-primary rounded-pill">Calculating...</span>
+                </li>
+              </ul>
+              <p class="small text-muted">Note: Estimates may vary depending on location, solar panel efficiency, battery depth of discharge, and desired autonomy (days of backup power).</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="custom-shape-divider-top-1745945728">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <h5 class="footer-title">Citadel Foundation</h5>
+          <p>
+            Shaping a new standard for power outage readiness through practical solutions,
+            energy awareness, and sustainable systems designed for vulnerable
+            and resource-limited communities.
+          </p>
+          <ul class="list-unstyled mt-3">
+            <li><strong>Registered Charity No:</strong> 2024-001234</li>
+            <li><strong>Founded:</strong> 2022</li>
+            <li><strong>Founder:</strong> J.P Watt</li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="POR.html" class="footer-link">Readiness</a></li>
+            <li><a href="Tips.html" class="footer-link">Energy Tips</a></li>
+            <li><a href="DoAndDont.html" class="footer-link">Do-s & Don't-s</a></li>
+            <li><a href="Aboutus.html" class="footer-link">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="footer-title">Contact Us</h5>
+          <p class="mb-1">Sao San Tun Road, Kyaung Gyi Su Quarter, Taunggyi, Southern Shan State, Myanmar</p>
+          <p class="mb-1">Email: <a href="mailto:citadelmm@outlook.com" class="text-info hover-link">citadelmm@outlook.com</a></p>
+          <p>Phone: <a href="tel:+950940268551" class="text-info hover-link">+95 0940268551</a>, <a href="tel:+9509428322904" class="text-info hover-link">+95 09428322904</a></p>
+          <div class="social-icons mt-3">
+            <a href="https://facebook.com/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="https://linkedin.com/company/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <div class="container">
+          &copy; 2025 www.edusn.co.uk. All rights reserved. Developed by EDUSN.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS library for animations
+    AOS.init();
+  </script>
+  <script>
+    // Add 'scrolled' class to navbar on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.custom-navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // --- Solar Calculator Logic ---
+    const applianceForm = document.getElementById('appliance-form');
+    const applianceList = document.getElementById('appliance-list');
+    const noMsg = document.getElementById('no-appliances-msg'); // Keep reference for potential future use, though not strictly needed with current render logic
+    const calculateBtn = document.getElementById('calculate-btn');
+    const resultsCard = document.getElementById('results-card');
+    const totalConsumptionEl = document.getElementById('total-consumption');
+    const panelEl = document.getElementById('recommended-panel');
+    const batteryEl = document.getElementById('recommended-battery');
+
+    let appliances = []; // Array to store added appliances
+
+    // Handle appliance form submission
+    applianceForm.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Get input values
+      const nameInput = document.getElementById('appliance-name');
+      const wattageInput = document.getElementById('appliance-wattage');
+      const hoursInput = document.getElementById('appliance-hours');
+
+      const name = nameInput.value.trim();
+      const wattage = parseFloat(wattageInput.value);
+      const hours = parseFloat(hoursInput.value);
+
+      // Validate inputs
+      if (!name || isNaN(wattage) || wattage <= 0 || isNaN(hours) || hours <= 0) {
+          alert('Please enter valid appliance details (Name, Wattage > 0, Hours/Day > 0).');
+          return; // Stop if validation fails
+      }
+
+      // Add appliance to array
+      appliances.push({ name, wattage, hours });
+
+      // Render the updated list
+      renderApplianceList();
+
+      // Reset the form inputs
+      applianceForm.reset();
+
+      // Hide results card if visible (optional, depends on desired UX)
+      // resultsCard.style.display = 'none';
+    });
+
+    // Render the list of added appliances
+    function renderApplianceList() {
+      applianceList.innerHTML = ''; // Clear current list
+
+      if (appliances.length === 0) {
+        // Display message if no appliances are added
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.id = 'no-appliances-msg';
+        li.textContent = 'No appliances added yet.';
+        applianceList.appendChild(li);
+        // Hide results if list becomes empty
+        resultsCard.style.display = 'none';
+        return;
+      }
+
+      // Render each appliance in the list
+      appliances.forEach((app, index) => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.innerHTML = `
+          <div>
+            <strong>${app.name}</strong> - ${app.wattage}W for ${app.hours}h
+          </div>
+          <button type="button" class="btn btn-sm btn-danger" onclick="removeAppliance(${index})" aria-label="Remove ${app.name}">Remove</button>
+        `;
+        applianceList.appendChild(li);
+      });
+    }
+
+    // Remove an appliance by index
+    function removeAppliance(index) {
+      if (index > -1 && index < appliances.length) {
+        appliances.splice(index, 1); // Remove item from array
+        renderApplianceList(); // Re-render the list
+        // Re-calculate if results are currently shown and list is not empty
+        if (resultsCard.style.display !== 'none' && appliances.length > 0) {
+             calculateSolarNeeds();
+        } else if (appliances.length === 0) {
+             resultsCard.style.display = 'none';
+        }
+      }
+    }
+
+    // Calculate solar needs based on added appliances
+    calculateBtn.addEventListener('click', function () {
+      if (appliances.length === 0) {
+        alert('Please add at least one appliance to calculate.');
+        resultsCard.style.display = 'none'; // Ensure results are hidden if list is empty
+        return;
+      }
+      calculateSolarNeeds();
+    });
+
+    function calculateSolarNeeds() {
+        // Calculate total daily energy consumption in Wh
+        const totalWh = appliances.reduce((acc, app) => acc + (app.wattage * app.hours), 0);
+        totalConsumptionEl.textContent = `${totalWh.toFixed(2)} Wh`; // Display with 2 decimal places
+
+        // --- Estimation Logic ---
+        // These are simplified estimations. Real calculations are more complex.
+        const avgSunHours = 4; // Average peak sun hours per day (varies greatly by location)
+        const systemLosses = 1.3; // Factor for system losses (inverter, wiring, temperature, etc.)
+        const batteryAutonomyDays = 1.5; // Days of backup power needed (e.g., 1.5 days)
+        const batteryDepthOfDischarge = 0.8; // Max usable capacity of battery (e.g., 80%)
+
+        // Recommended Panel Capacity (W)
+        // Need to generate enough energy to cover daily usage plus losses
+        const requiredPanelOutput = totalWh * systemLosses;
+        const recommendedPanelCapacity = Math.ceil(requiredPanelOutput / avgSunHours); // Capacity needed to generate required output in avg sun hours
+
+        // Recommended Battery Capacity (Wh)
+        // Need enough capacity for autonomy days considering usable capacity
+        const requiredBatteryCapacity = totalWh * batteryAutonomyDays / batteryDepthOfDischarge;
+        const recommendedBatteryCapacity = Math.ceil(requiredBatteryCapacity); // Total battery capacity needed
+
+        // Update results display
+        panelEl.textContent = `${recommendedPanelCapacity} W`;
+        batteryEl.textContent = `${recommendedBatteryCapacity} Wh`;
+
+        // Show the results card
+        resultsCard.style.display = 'block';
+    }
+
+    // Initial render on page load
+    renderApplianceList();
+
+  </script>
+</body>
+</html>

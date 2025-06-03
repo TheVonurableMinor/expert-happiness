@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power Outage Readiness | Citadel</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../Media/Logo.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../Css/Footer.css">
+  <link rel="stylesheet" href="../Css/Navbar.css">
+  <link rel="stylesheet" href="../Css/index.css">
+  <!-- Add a specific CSS file for this page if needed, or add styles to index.css>
+  <!-- <link rel="stylesheet" href="POR.css"> -->
+</head>
+<body>
+<nav class="navbar navbar-expand-lg custom-navbar shadow fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../Media/Logo.png" alt="Citadel Foundation Logo" class="logo-img animate__animated animate__fadeIn">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="faded-line"></div>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav menu-wrapper">
+        <li class="nav-item">
+          <a class="nav-link menu-box" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link menu-box dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Readiness
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item menu-box active" href="POR.html">Power Outage Readiness</a></li>
+            <li><a class="dropdown-item menu-box" href="DoAndDont.html">Do & Don't</a></li>
+            <li><a class="dropdown-item menu-box" href="SaveEnergy.html">Save Energy</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu-box" href="Tips.html">Tips</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link menu-box dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Solar
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item menu-box" href="Solar_Calc.html">Calculator</a></li>
+            <li><a class="dropdown-item menu-box" href="SIG.html">Solar Installation Guide</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link menu-box" href="Aboutus.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section hero-por text-center text-white pt-navbar-offset">
+  <div class="container py-5">
+    <h1 class="display-4 mb-4">Power Outage Readiness</h1>
+    <p class="lead mb-4">Be prepared, stay safe, and keep your family secure during power outages.</p>
+    <p class="mb-5">Learn Do-s & Don't-s tips, find answers to common questions, and use our handy checklist to get ready.</p>
+    <a href="#faqAccordion" class="btn btn-outline-light btn-lg me-2 mb-2">View FAQs</a>
+    <a href="#checklist" class="btn btn-outline-light btn-lg mb-2">See Checklist</a>
+  </div>
+</section>
+
+<!-- Main Content -->
+<!-- Removed inline background color, assuming it will be handled by external CSS -->
+<section class="py-5 main-content-por">
+  <div class="container">
+
+    <!-- Tips and Facts Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="card bg-transparent border-0">
+          <div class="card-body">
+            <h2 class="h4 mb-4 text-white"><i class="bi bi-lightbulb-fill me-2"></i>Do-s & Don't-s Tips &amp; Facts</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="tips-facts-list text-white">
+                  <li><strong>Tip:</strong> Keep your phone on low power mode and dim the screen to extend battery life during outages.</li>
+                  <li><strong>Fact:</strong> LED flashlights use lesSoler Calculator and last longer than traditional bulbs.</li>
+                  <li><strong>Tip:</strong> Freeze water bottles to help keep food cold in the fridge and use as drinking water when melted.</li>
+                  <li><strong>Fact:</strong> Solar-powered lanterns and chargers are reliable and reusable for long-term outages.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="tips-facts-list text-white">
+                  <li><strong>Tip:</strong> Unplug appliances to avoid damage from power surges when electricity returns.</li>
+                  <li><strong>Fact:</strong> A family emergency plan ensures everyone knows what to do and where to meet during a blackout.</li>
+                  <li><strong>Tip:</strong> Store enough water for at least 3 days (about 4 liters per person per day).</li>
+                  <li><strong>Fact:</strong> Foods like canned beans, nuts, and dried fruits require no refrigeration and are nutritious.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5 text-white-50"> <!-- Added faded line separator -->
+
+    <!-- Emergency Plan Section (New Section) -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="card bg-transparent border-0">
+          <div class="card-body">
+            <h2 class="h4 mb-4 text-white"><i class="bi bi-house-door-fill me-2"></i>Create Your Emergency Plan</h2>
+            <p class="text-white">Having a plan in place before an outage can significantly reduce stress and improve safety. Discuss these points with your household:</p>
+            <ul class="tips-facts-list text-white">
+              <li>Identify a safe meeting point outside your home in case of evacuation.</li>
+              <li>Establish communication methods if cell towers are down (e.g., text messages, social /Media, or a designated out-of-state contact).</li>
+              <li>Know how to manually open your garage door if it's electric.</li>
+              <li>Learn how to turn off utilities (gas, water, electricity) if necessary, and know when it's safe to do so.</li>
+              <li>Plan for pets, including food, water, and safe shelter.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5 text-white-50"> <!-- Added faded line separator -->
+
+    <!-- Gathering Supplies Section (New Section) -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="card bg-transparent border-0">
+          <div class="card-body">
+            <h2 class="h4 mb-4 text-white"><i class="bi bi-box-seam-fill me-2"></i>Gather Do-s & Don't-s Supplies</h2>
+            <p class="text-white">A well-stocked emergency kit is crucial. Ensure you have:</p>
+            <ul class="tips-facts-list text-white">
+              <li>Water (one gallon per person per day for several days).</li>
+              <li>Food (at least a three-day supply of non-perishable food).</li>
+              <li>Battery-powered or hand-crank radio and a NOAA Weather Radio with tone alert.</li>
+              <li>Flashlight and extra batteries.</li>
+              <li>First aid kit.</li>
+              <li>Whistle to signal for help.</li>
+              <li>Dust mask to help filter contaminated air and plastic sheeting and duct tape to shelter-in-place.</li>
+              <li>Moist towelettes, garbage bags and plastic ties for personal sanitation.</li>
+              <li>Wrench or pliers to turn off utilities.</li>
+              <li>Manual can opener for food.</li>
+              <li>Local maps.</li>
+              <li>Cell phone with chargers and a backup battery or solar charger.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5 text-white-50"> <!-- Added faded line separator -->
+
+    <div class="row">
+      <!-- FAQ Section -->
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100 bg-transparent border-light">
+          <div class="card-body">
+            <h2 class="h4 mb-4 text-white"><i class="bi bi-question-circle-fill me-2"></i>Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item bg-transparent border-light">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What should I do first when the power goes out?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-white">
+                    <ul>
+                      <li>Stay calm and check if the outage is only in your home or the whole neighborhood.</li>
+                      <li>Turn off and unplug sensitive electronics to prevent damage from surges.</li>
+                      <li>Use a flashlight instead of candles to avoid fire hazards.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-transparent border-light">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How long will food last in my refrigerator during an outage?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-white">
+                    <ul>
+                      <li>An unopened refrigerator will keep food cold for about 4 hours</li>
+                      <li>A full freezer will maintain temperature for about 48 hours</li>
+                      <li>A half-full freezer will maintain temperature for about 24 hours</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item bg-transparent border-light">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed bg-transparent text-white fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How can I prepare my home for extended power outages?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-white">
+                    <ul>
+                      <li>Install a backup generator or solar power system</li>
+                      <li>Stock up on non-perishable food and bottled water</li>
+                      <li>Have battery-powered or hand-crank emergency radio</li>
+                      <li>Keep emergency contact numbers handy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist Section -->
+      <div class="col-lg-6 mb-4">
+        <div class="card h-100 bg-transparent border-light">
+          <div class="card-body">
+            <h2 class="h4 mb-4 text-white"><i class="bi bi-clipboard-check me-2"></i>Power Outage Checklist</h2>
+            <button class="btn btn-outline-light mb-3" onclick="window.print()"><i class="bi bi-printer me-2"></i>Print Checklist</button>
+            <ul class="list-group" id="checklist">
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk1">
+                <label class="form-check-label" for="chk1">Flashlights and extra batteries ready</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk2">
+                <label class="form-check-label" for="chk2">Emergency water supply (4L per person per day)</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk3">
+                <label class="form-check-label" for="chk3">Non-perishable food and manual can opener</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk4">
+                <label class="form-check-label" for="chk4">First aid kit and prescription medications</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk5">
+                <label class="form-check-label" for="chk5">Battery-powered or hand-crank radio</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk6">
+                <label class="form-check-label" for="chk6">Portable phone chargers fully charged</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk7">
+                <label class="form-check-label" for="chk7">Emergency contact numbers written down</label>
+              </li>
+              <li class="list-group-item d-flex align-items-center bg-transparent text-white border-light">
+                <input class="form-check-input me-2" type="checkbox" id="chk8">
+                <label class="form-check-label" for="chk8">Important documents in waterproof container</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="my-5 text-white-50"> <!-- Added faded line separator before footer -->
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="custom-shape-divider-top-1745945728">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+      <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-4">
+        <h5 class="footer-title">Citadel Foundation</h5>
+        <p>
+          Shaping a new standard for power outage readiness through practical solutions,
+          energy awareness, and sustainable systems designed for vulnerable
+          and resource-limited communities.
+        </p>
+        <ul class="list-unstyled mt-3">
+          <li><strong>Registered Charity No:</strong> 2024-001234</li>
+          <li><strong>Founded:</strong> 2022</li>
+          <li><strong>Founder:</strong> J.P Watt</li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="POR.html" class="footer-link">Readiness</a></li>
+          <li><a href="Tips.html" class="footer-link">Energy Tips</a></li>
+          <li><a href="DoAndDont.html" class="footer-link">Do-s & Don't-s</a></li>
+          <li><a href="Aboutus.html" class="footer-link">About Us</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4">
+        <h5 class="footer-title">Contact Us</h5>
+        <p class="mb-1">Sao San Tun Road, Kyaung Gyi Su Quarter, Taunggyi, Southern Shan State, Myanmar</p>
+        <p class="mb-1">Email: <a href="mailto:citadelmm@outlook.com" class="text-info hover-link">citadelmm@outlook.com</a></p>
+        <p>Phone: <a href="tel:+950940268551" class="text-info hover-link">+95 0940268551</a>, <a href="tel:+9509428322904" class="text-info hover-link">+95 09428322904</a></p>
+        <div class="social-icons mt-3">
+          <a href="https://facebook.com/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="https://linkedin.com/company/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/citadelmm" target="_blank" rel="noopener" class="social-icon"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <div class="container">
+        &copy; 2025 www.edusn.co.uk. All rights reserved. Developed by EDUSN.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FAQ Accordion Script -->
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.custom-navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+</body>
+</html>
